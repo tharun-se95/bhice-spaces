@@ -1,14 +1,37 @@
-# This file is a template, and might need editing before it works on your project.
-# Full project: https://gitlab.com/pages/plain-html
+# Specify an image with Node.js
+image: node:18
 
-image: busybox
+# Define caching to speed up pipeline execution
+cache:
+  paths:
+    - node_modules/
 
-pages:
-  stage: deploy
+# Define the stages in the pipeline
+stages:
+  - install
+  - build
+  - deploy
+
+# Install dependencies stage
+install_dependencies:
+  stage: install
   script:
-    - echo "The site will be deployed to $CI_PAGES_URL"
+    - npm ci
+
+# Build the Next.js project
+build:
+  stage: build
+  script:
+    - npm run build
   artifacts:
     paths:
-      - public
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      - .next
+
+# Deployment stage
+deploy_production:
+  stage: deploy
+  script:
+    - echo "Deploying to production..."
+    # Add your deployment commands here
+  only:
+    - main # Deploy only on the main branch
