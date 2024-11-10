@@ -14,7 +14,7 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
 
   return (
     <div
-      className={`p-4 flex gap-5 items-center justify-start hover:rounded-lg hover:shadow-md hover:bg-white`}
+      className={`p-4 flex gap-5 items-center justify-start rounded-lg shadow-md bg-white cursor-pointer md:rounded-none md:shadow-none md:bg-background hover:md:shadow-md hover:md:bg-white hover:md:rounded-lg`}
       style={{ minHeight: "100px" }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -30,7 +30,9 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
         >
           {title}
         </div>
-        {isHovered && <p className="text-sm text-grey-500">{description}</p>}
+        {isHovered && (
+          <p className="hidden md:block text-sm text-grey-500">{description}</p>
+        )}
       </div>
     </div>
   );

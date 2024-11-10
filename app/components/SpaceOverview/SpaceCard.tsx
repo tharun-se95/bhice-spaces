@@ -27,7 +27,7 @@ const SpaceCard: React.FC<SpaceCardProps> = ({
   bulkPassDays,
 }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-4 w-full max-w-sm mx-auto">
+    <div className="bg-white shadow-lg rounded-lg p-4 w-full max-w-sm md:max-w-sm mx-auto transition-transform duration-300 hover:scale-105 cursor-pointer">
       {/* Header with Location and Distance */}
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-lg font-semibold text-grey-800">{title}</h2>
@@ -60,7 +60,7 @@ const SpaceCard: React.FC<SpaceCardProps> = ({
       </div>
 
       {/* Pricing Section */}
-      <div className="flex gap-2 justify-between items-center mt-4">
+      <div className="flex flex-wrap gap-2 justify-between items-center mt-4">
         <PassButton
           title="Day Pass"
           price={dayPassPrice}
@@ -93,7 +93,7 @@ const PassButton = ({
   discount,
 }: any) => (
   <button
-    className={`flex w-full relative gap-5 items-center justify-between text-left px-4 py-4 rounded-md transition-colors ${bgColor} ${hoverColor}`}
+    className={`flex flex-grow w-1/4 relative gap-5 items-center min-w-max justify-between text-left px-4 py-4 rounded-md transition-colors ${bgColor} ${hoverColor}`}
   >
     {discount && (
       <span className="absolute top-[-10] left-[50] px-2 py-1 text-xs bg-textMain text-lightYellow rounded">

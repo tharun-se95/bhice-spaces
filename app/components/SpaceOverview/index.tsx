@@ -3,11 +3,11 @@ import spaces from "@/public/data.json";
 
 function SpaceOverview() {
   return (
-    <section className="bg-background text-textMain py-16">
-      <h2 className="text-3xl font-bold text-start mb-10 ml-24">
+    <section className="bg-background text-textMain my-16">
+      <h2 className="text-3xl font-bold text-start mb-10 ml-6 md:ml-24">
         Our Space Overview
       </h2>
-      <div className="ml-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mx-6 md:ml-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {spaces.map((space) => (
           <SpaceCard
             key={space.id}

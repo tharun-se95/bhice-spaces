@@ -25,7 +25,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className=" w-full md:w-[30%] h-[52vh] relative overflow-hidden">
+      <div className=" w-full md:w-[30%] h-[40vh] lg:h-[42vh] relative overflow-hidden">
         {/* Coworking Image */}
         <div className="absolute md:left-[-13%] top-[10%] w-[100%]">
           <Image
@@ -50,7 +50,7 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className="w-full h-[20vh] relative  md:hidden overflow-hidden">
+      <div className="w-full h-40 relative  md:hidden overflow-hidden">
         <Image
           src={herobg}
           alt="Hero Background"
@@ -58,8 +58,8 @@ export default function Header() {
           height={754}
           className="absolute mix-blend-multiply opacity-50"
         />
-        <div className="absolute p-[20] flex items-center w-full h-full text-center">
-          <p className="text- xl font-bold text-textMain w-full leading-snug">
+        <div className="absolute p-6 flex w-full h-full text-center">
+          <p className="text-xl font-bold text-textMain w-full leading-snug">
             Host your meeting with world-class amenities. Starting at{" "}
             <span className="text-primary2">₹199/-!</span>
           </p>
