@@ -90,7 +90,14 @@ const PassButton = ({
   bgColor,
   hoverColor,
   discount,
-}: any) => (
+}: {
+  title: string;
+  price: number;
+  duration: string;
+  bgColor: string;
+  hoverColor: string;
+  discount?: string;
+}) => (
   <button
     className={`flex flex-grow w-1/4 relative gap-5 items-center min-w-max justify-between text-left px-4 py-4 rounded-md transition-colors ${bgColor} ${hoverColor}`}
   >
