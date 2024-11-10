@@ -1,8 +1,5 @@
 // app/components/Header/Header.tsx
 import React from "react";
-import Image from "next/image";
-import logo from "@/public/assets/images/logo.png"; // Replace with the actual path to your logo file
-import phoneIcon from "@/public/assets/images/call.svg"; // Replace with the actual path to your phone icon
 
 export default function Header() {
   return (

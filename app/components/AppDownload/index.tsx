@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Apps from "@/public/assets/images/bhive apps.svg";
 import GooglePlay from "@/public/assets/images/Download 1.svg";
 import Appstore from "@/public/assets/images/Download 2.svg";

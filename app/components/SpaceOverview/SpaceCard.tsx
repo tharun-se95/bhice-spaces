@@ -20,7 +20,6 @@ interface SpaceCardProps {
 const SpaceCard: React.FC<SpaceCardProps> = ({
   imageSrc,
   title,
-  location,
   distance,
   dayPassPrice,
   bulkPassPrice,
