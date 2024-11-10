@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inject CSS variables directly from Tailwind theme */
+:root {
+  --primary1: theme("colors.primary1");
+  --primary2: theme("colors.primary2");
+  --lightYellow: theme("colors.lightYellow");
+  --darkYellow: theme("colors.darkYellow");
+  --lightGrey: theme("colors.lightGrey");
+  --darkGrey: theme("colors.darkGrey");
+  --textMain: theme("colors.textMain");
+  --textSecondary: theme("colors.textSecondary");
+  --grey1: theme("colors.grey1");
+  --grey2: theme("colors.grey2");
+  --grey3: theme("colors.grey3");
+  --grey4: theme("colors.grey4");
+  --grey5: theme("colors.grey5");
+
+  --background: theme("colors.background");
+  --foreground: theme("colors.foreground");
+
+  --font-family: theme("fontFamily.inter");
+  --font-size-h1: theme("fontSize.h1");
+  --font-size-h2: theme("fontSize.h2");
+  --font-size-h3: theme("fontSize.h3");
+  --font-size-h4: theme("fontSize.h4");
+  --font-size-h5: theme("fontSize.h5");
+  --font-size-h6: theme("fontSize.h6");
+  --line-height-heading: theme("lineHeight.heading");
+}
+
+/* Dark mode media query */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--background); /* Adjust dark background */
+    --foreground: var(--background); /* Adjust dark foreground */
+  }
+}
+
+/* Body and other global styles */
+body {
+  box-sizing: border-box;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-family);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Centered container with max-width for responsive layout */
+.container {
+  max-width: 1440px;
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  /* padding: 0 1rem; Small padding on the sides for smaller screens */
+  background: #f9faff;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-heading);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+}
+
+button {
+  background-color: var(--primary2);
+  color: var(--primary1);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  background-color: var(--lightYellow);
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--grey3);
+  padding: 0.5rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-h5);
+}
