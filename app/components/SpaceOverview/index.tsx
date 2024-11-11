@@ -1,7 +1,11 @@
+"use client";
+
 import SpaceCard from "./SpaceCard";
-import spaces from "@/public/data.json";
+import { useSelector } from "react-redux";
+import { RootState } from "@/app/redux/store";
 
 function SpaceOverview() {
+  const spaces = useSelector((state: RootState) => state.data.spaces);
   return (
     <section className="bg-background text-textMain my-16">
       <h2 className="font-bold text-center lg:text-start mb-10 mx-6 lg:mx-12">
