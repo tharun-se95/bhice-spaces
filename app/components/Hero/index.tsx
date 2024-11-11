@@ -7,8 +7,8 @@ import vector7 from "@/public/assets/images/Vector 7.svg";
 
 export default function Header() {
   return (
-    <div className="md:flex w-full h-full md:overflow-hidden relative">
-      <div className="w-[70%] relative hidden md:block">
+    <section className="md:flex w-full h-full md:overflow-hidden relative">
+      <div className="w-[60%] relative hidden md:block">
         <Image
           src={herobg}
           alt="Hero Background"
@@ -17,17 +17,17 @@ export default function Header() {
           height={754}
           className="absolute max-w-full max-h-full object-strech"
         />
-        <div className="md:p-10 lg:p-24 absolute w-full h-full text-start">
-          <p className="md:text-4xl lg:text-6xl font-bold text-textMain w-full leading-snug">
+        <div className="md:py-12 lg:p-12 absolute w-full h-full text-start">
+          <h1 className="font-bold text-textMain w-full leading-snug">
             Host your meeting with world-class amenities. Starting at{" "}
             <span className="text-primary2">₹199/-!</span>
-          </p>
+          </h1>
         </div>
       </div>
 
-      <div className=" w-full md:w-[30%] h-[40vh] lg:h-[42vh] relative overflow-hidden">
+      <div className="w-full md:w-[40%] h-[40vh] md:h-[50vh] lg:h-[45vh] relative overflow-hidden">
         {/* Coworking Image */}
-        <div className="absolute md:left-[-13%] top-[10%] w-[100%]">
+        <div className="absolute w-full md:left-[-13%] top-[10%]  h-[90%] md:h-[85%]">
           <Image
             src={coworking}
             alt="Coworking Icon"
@@ -39,7 +39,7 @@ export default function Header() {
         </div>
 
         {/* Vector Image */}
-        <div className="absolute w-[100%] left-[13%] md:left-[0] h-full">
+        <div className="absolute w-full left-[13%] md:left-[0] h-full">
           <Image
             src={vector7}
             alt="Vector Image"
@@ -50,21 +50,14 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className="w-full h-40 relative  md:hidden overflow-hidden">
-        <Image
-          src={herobg}
-          alt="Hero Background"
-          width={850}
-          height={754}
-          className="absolute mix-blend-multiply opacity-50"
-        />
-        <div className="absolute p-6 flex w-full h-full text-center">
-          <p className="text-xl font-bold text-textMain w-full leading-snug">
+      <div className="w-full md:hidden">
+        <div className="py-6 flex w-full h-full text-center">
+          <h3 className="font-bold text-textMain w-full leading-snug">
             Host your meeting with world-class amenities. Starting at{" "}
             <span className="text-primary2">₹199/-!</span>
-          </p>
+          </h3>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

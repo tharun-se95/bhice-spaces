@@ -4,10 +4,10 @@ import spaces from "@/public/data.json";
 function SpaceOverview() {
   return (
     <section className="bg-background text-textMain my-16">
-      <h2 className="text-3xl font-bold text-start mb-10 ml-6 md:ml-24">
+      <h2 className="font-bold text-center lg:text-start mb-10 mx-6 lg:mx-12">
         Our Space Overview
       </h2>
-      <div className="mx-6 md:ml-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mx-6 lg:mx-12">
         {spaces.map((space) => (
           <SpaceCard
             key={space.id}
