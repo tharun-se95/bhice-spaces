@@ -102,7 +102,10 @@ const PassButton = ({
     className={`flex flex-grow w-1/4 relative gap-5 items-center min-w-max justify-between text-left px-4 py-4 rounded-md transition-colors ${bgColor} ${hoverColor}`}
   >
     {discount && (
-      <span className="absolute top-[-10] left-[50] px-2 py-1 text-xs bg-textMain text-lightYellow rounded">
+      <span
+        className="absolute px-2 py-1 text-xs bg-textMain text-lightYellow rounded"
+        style={{ top: "-10px", left: "50px" }}
+      >
         {discount} Discount
       </span>
     )}
