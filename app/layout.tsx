@@ -15,7 +15,8 @@ export default function RootLayout({
 }>) {
   const metadata: Metadata = {
     title: "BHive",
-    description: "Assesment Page",
+    description:
+      "Book your meetings at BHIVE Workspace, offering world-class amenities starting at just ₹199/day! Enjoy comfortable lounges, high-speed WiFi, gym facilities, a cafe & tea bar, and quick booking options. Explore multiple workspace locations in HSR Sector, Bangalore, with flexible day passes and bulk pass discounts. Download the BHIVE Workspace app to elevate your productivity and unlock exclusive perks.",
   };
   return (
     <html lang="en">
